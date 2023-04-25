@@ -1,6 +1,6 @@
 <template>
   <div class="container flex flex-row">
-    <div v-for="banner in photos" :key="banner._id" class="m-2">
+    <div v-for="banner in photos" :key="banner._id" class="m-2 overflow-x-auto whitespace-nowrap">
       <div class="mx-8 h-32 justify-center items-center flex" v-if="loading">
         <img
           :src="banner.photo_url"
@@ -28,12 +28,14 @@
           <span class="sr-only">Loading...</span>
         </div>
       </div>
-      <img
-        v-else
+      <div v-else>
+        <img
         :src="banner.photo_url"
         class="w-32 h-32 object-cover rounded-lg shadow-md"
         @load="handleLoad"
       />
+      </div>
+      
     </div>
   </div>
 </template>

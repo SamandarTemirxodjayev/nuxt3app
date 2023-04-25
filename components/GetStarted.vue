@@ -17,11 +17,11 @@
       </div>
     </div>
     <div class="text-3xl justify-center items-center flex pt-24">
-      <nuxt-link to="/home">
+      <NuxtLink to="/home">
         <button class="bg-white text-orange-set rounded-3xl py-4 px-16">
           Get Started
         </button>
-      </nuxt-link>
+      </NuxtLink>
     </div>
   </div>
 </template>

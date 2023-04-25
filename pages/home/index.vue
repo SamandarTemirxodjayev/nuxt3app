@@ -28,7 +28,7 @@ const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
     <div
       class="flex my-3 text-gray-400 text-2xl overflow-x-auto whitespace-nowrap"
     >
-      <div class="mx-1 cursor-pointer text-gray-500">
+      <div class="mx-1 cursor-pointer text-orange-set" style="border-bottom: 2px solid #ffc83a">
         <NuxtLink to="/home"> All </NuxtLink >
       </div>
       <div
@@ -36,22 +36,13 @@ const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
         :key="catalog._id"
         class="mx-3 cursor-pointer text-gray-500"
       >
-        <div
-          v-if="id == catalog._id"
-          class="cursor-pointer text-orange-set"
-          style="border-bottom: 2px solid #ffc83a"
-        >
-          <NuxtLink :to="`/home/${catalog._id}`">
-            {{ catalog.name }}
-          </NuxtLink>
-        </div>
-        <NuxtLink v-else :to="`/home/${catalog._id}`">
+        <NuxtLink :to="`/home/${catalog._id}`">
           {{ catalog.name }}
         </NuxtLink>
       </div>
     </div>
     <slider :photos="banners.banners" />
-    <CatalogMenu :id="id" />
+    <Menu :catalogs="catalogs.catalogs"  />
   </div>
 </template>
 

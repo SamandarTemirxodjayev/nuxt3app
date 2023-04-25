@@ -4,9 +4,6 @@ dependencies:
   axios:
     specifier: ^1.3.6
     version: 1.3.6
-  vue-feather-icons:
-    specifier: ^5.1.0
-    version: 5.1.0
   vuex:
     specifier: ^4.1.0
     version: 4.1.0(vue@3.2.47)
@@ -1539,10 +1536,6 @@ packages:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
-    dev: false
-
-  /babel-helper-vue-jsx-merge-props@2.0.3:
-    resolution: {integrity: sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==}
     dev: false
 
   /balanced-match@1.0.2:
@@ -5638,12 +5631,6 @@ packages:
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
-
-  /vue-feather-icons@5.1.0:
-    resolution: {integrity: sha512-ZyM2yFGmL9DYLZYHm63KV1zCQOj8czC2LzDSkxoIp9o6zMAOY4yv1FkxbX+XNUwcH3RRrAuvf25Ij7CnUUsQVA==}
-    dependencies:
-      babel-helper-vue-jsx-merge-props: 2.0.3
-    dev: false
 
   /vue-router@4.1.6(vue@3.2.47):
     resolution: {integrity: sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==}
