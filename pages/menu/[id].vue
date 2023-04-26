@@ -54,7 +54,7 @@
     <div class="text-2xl p-2 font-600">Popular Items</div>
     <div class="p-4">
       <div v-for="menuItem in menus" :key="`${menuItem._id}`">
-        <nuxt-link :to="`/menu/${menuItem._id}`">
+        <NuxtLink :to="`/menu/${menuItem._id}`">
           <div v-if="id != menuItem._id">
             <div class="flex items-center p-4">
               <img
@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-        </nuxt-link>
+        </NuxtLink>
       </div>
     </div>
   </div>
