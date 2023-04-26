@@ -8,21 +8,16 @@ const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
     <Loader />
   </div>
   <div v-else>
-    <div class="flex justify-between mr-[10%]">
-      <div class="text-4xl font-bold">
+    <div class="flex justify-between mr-[5%]">
+      <div class="text-4xl font-bold m-[3%]">
         Delicious <br />
         food for you
       </div>
-      <NuxtLink to="/cart" class="mt-5">
-        <img
-          src="@/assets/shopping-cart.png"
-          alt=""
-          height="35px"
-          width="35px"
-        />
+      <NuxtLink to="/" class="mt-[4%] w-[20%] h-[20%]">
+        <cart-img />
       </NuxtLink>
     </div>
-    <div class="mt-6">
+    <div class="my-[5%]">
       <search />
     </div>
     <div

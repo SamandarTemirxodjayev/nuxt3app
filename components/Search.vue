@@ -2,7 +2,7 @@
   <div>
     <input
       type="text"
-      class="w-full py-2 px-4 pl-8 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-set text-2xl h-10"
+      class="w-[94%] py-[2.5%] px-[5%] pl-[4%] ml-[3%] border border-yellow-500 rounded-3xl focus:outline-none focus:ring-2 focus:ring-yellow-700 text-2xl h-[7%]"
       placeholder="Search for food..."
       v-model="searchTerm"
       @input="handleSearch"
