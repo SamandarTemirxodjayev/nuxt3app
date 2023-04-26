@@ -21,11 +21,11 @@
       <img :src="`${menu.photo_url}`" alt="" class="none" @load="handleLoad" />
     </div>
   </div>
-  <div class="bg-white rounded-lg overflow-hidden" v-else>
+  <div class="bg-white" v-else>
     <NuxtLink to="/home">
       <button
         type="button"
-        class="fixed h-12 w-12 justify-center rotate-180 left-6 top-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="fixed h-12 w-12 justify-center rotate-180 left-3 top-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
         <svg
           aria-hidden="true"
