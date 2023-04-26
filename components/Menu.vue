@@ -1,16 +1,16 @@
 <template>
   <div v-if="loading" class="">
-    <div class="" v-for="item in 4" :key="item">
-      <div role="status" class="animate-pulse">
+    <div v-for="item in 4" :key="item">
+      <div role="status" class="max-w-sm animate-pulse">
         <div
           class="h-5 bg-gray-200 rounded-full dark:bg-gray-400 w-[80%] m-2"
         ></div>
         <span class="sr-only">Loading...</span>
       </div>
-      <div class="overflow-x-auto flex">
+      <div class="w-full flex overflow-x-auto">
         <div
           role="status"
-          class=" p-2 rounded animate-pulse md:p-4 w-full"
+          class="max-w-sm p-2 rounded animate-pulse md:p-4 w-[80%] flex-0-0"
         >
           <div
             class="items-center justify-center h-48 bg-gray-300 rounded dark:bg-gray-400"
@@ -31,10 +31,10 @@
         </div>
         <div
           role="status"
-          class="max-w-sm p-2 rounded animate-pulse md:p-4 w-full"
+          class="max-w-sm p-2 rounded animate-pulse md:p-4 w-[80%] flex-0-0"
         >
           <div
-            class="flex items-center justify-center h-48 bg-gray-300 rounded dark:bg-gray-400"
+            class="items-center justify-center h-48 bg-gray-300 rounded dark:bg-gray-400"
           >
             <svg
               class="w-12 h-12 text-gray-200 dark:text-gray-400"
@@ -113,3 +113,8 @@ export default {
   },
 };
 </script>
+<style>
+.flex-0-0 {
+  flex: 0 0 auto;
+}
+</style>
