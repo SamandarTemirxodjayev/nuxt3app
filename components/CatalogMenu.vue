@@ -6,15 +6,15 @@
           :to="`/menu/${menuItem._id}`"
           class="bg-white rounded-lg mt-5"
         >
-          <div class="font-bold">
+          <div
+            class="font-bold shadow-2xl border border-purple-400 rounded-3xl"
+          >
             <catalog-img :url="menuItem.photo_url" />
-            <div class="p-1 pb-5">
-              <h3 class="text-2xl mb-2">{{ menuItem.name }}</h3>
-              <div class="flex justify-between text-end">
-                <span class="text-xl">
-                  {{ Number(menuItem.price).toLocaleString() }} so'm
-                </span>
-              </div>
+            <div class=" pb-5 px-[5%]">
+              <h3 class="text-2xl my-2">{{ menuItem.name }}</h3>
+              <span class="text-xl">
+                {{ Number(menuItem.price).toLocaleString() }} so'm
+              </span>
             </div>
           </div>
         </NuxtLink>

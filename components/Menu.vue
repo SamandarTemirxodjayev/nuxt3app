@@ -64,14 +64,16 @@
             class="rounded-t-lg m-2 flex-none"
             style="width: 300px"
           >
-            <div class="shadow-xl border border-purple-300 rounded-2xl cursor-pointer">
+            <div
+              class="shadow-xl border border-purple-300 rounded-2xl cursor-pointer"
+            >
               <NuxtLink :to="`/menu/${menu._id}`">
                 <menu-img :url="menu.photo_url" />
                 <div class="py-1 px-[5%]">
                   <h3 class="font-bold text-xl mb-2">{{ menu.name }}</h3>
-                    <span class="font-bold text-xl ">
-                      {{ Number(menu.price).toLocaleString() }} so'm
-                    </span>
+                  <span class="font-bold text-xl">
+                    {{ Number(menu.price).toLocaleString() }} so'm
+                  </span>
                 </div>
               </NuxtLink>
             </div>
