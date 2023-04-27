@@ -54,7 +54,7 @@
     </div>
   </div>
   <div v-else>
-    <div v-for="catalog in catalogs" :key="catalog._id" class="cursor-pointer">
+    <div v-for="catalog in catalogs" :key="catalog._id" class="">
       <h2 class="text-2xl font-bold p-1">{{ catalog.name }}</h2>
       <div class="container">
         <div class="overflow-x-auto whitespace-nowrap flex">
@@ -64,7 +64,7 @@
             class="rounded-t-lg m-2 flex-none"
             style="width: 300px"
           >
-            <div class="shadow-xl border border-purple-300 rounded-2xl">
+            <div class="shadow-xl border border-purple-300 rounded-2xl cursor-pointer">
               <NuxtLink :to="`/menu/${menu._id}`">
                 <menu-img :url="menu.photo_url" />
                 <div class="py-1 px-[5%]">
