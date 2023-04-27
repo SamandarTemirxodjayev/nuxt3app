@@ -61,20 +61,20 @@
           <div
             v-for="menu in filteredMenus(catalog._id)"
             :key="menu._id"
-            class="rounded-t-lg mx-2 my-2 flex-none"
+            class="rounded-t-lg m-2 flex-none"
             style="width: 300px"
           >
-            <NuxtLink :to="`/menu/${menu._id}`">
-              <menu-img :url="menu.photo_url" />
-              <div class="py-1">
-                <h3 class="font-bold text-2xl mb-2">{{ menu.name }}</h3>
-                <div class="flex justify-between text-end">
-                  <span class="font-bold text-xl">
-                    {{ menu.price.toLocaleString() }} so'm
-                  </span>
+            <div class="shadow-xl border border-purple-300 rounded-2xl">
+              <NuxtLink :to="`/menu/${menu._id}`">
+                <menu-img :url="menu.photo_url" />
+                <div class="py-1 px-[5%]">
+                  <h3 class="font-bold text-xl mb-2">{{ menu.name }}</h3>
+                    <span class="font-bold text-xl ">
+                      {{ Number(menu.price).toLocaleString() }} so'm
+                    </span>
                 </div>
-              </div>
-            </NuxtLink>
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
