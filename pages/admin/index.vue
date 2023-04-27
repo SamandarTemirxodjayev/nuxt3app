@@ -1,21 +1,12 @@
-<template>
-  <div>
-    <AdminNavbar />
-  </div>
-</template>
-
 <script>
-import AdminNavbar from '../../components/AdminNavbar.vue'
-export default {
+import { defineComponent } from '@vue/composition-api'
+import { onBeforeMount } from 'vue';
 
-  components: {
-    AdminNavbar
+export default defineComponent({
+  setup() {
+    onBeforeMount(() => {
+      window.location.href = 'https://restoranreact.vercel.app/admin'
+    });
   },
-  mounted() {
-    const id = localStorage.getItem('id');
-    if (!id) {
-      this.$router.push('/admin/login');
-    }
-  }
-}
+});
 </script>
