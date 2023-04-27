@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="menu.length">
-      <div v-for="menuItem in menu" :key="menuItem._id">
+      <div v-for="menuItem in menu" :key="menuItem._id" class="p-2">
         <NuxtLink
           :to="`/menu/${menuItem._id}`"
           class="bg-white rounded-lg mt-5"
