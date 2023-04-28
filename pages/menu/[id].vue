@@ -78,7 +78,6 @@
 
 <script>
 import axios from "axios";
-import BackSvg from "../../assets/back.svg";
 
 export default {
   data() {
@@ -113,9 +112,6 @@ export default {
     handleLoad() {
       this.loading = false;
     },
-  },
-  component: {
-    BackSvg,
   },
 };
 </script>

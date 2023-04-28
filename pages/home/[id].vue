@@ -1,5 +1,4 @@
 <script setup>
-const { data: banners } = useFetch("https://restoranmenu1.vercel.app/banner");
 const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
 </script>
 
@@ -45,17 +44,16 @@ const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
         </NuxtLink>
       </div>
     </div>
-    <slider :photos="banners.banners" />
     <CatalogMenu :id="id" />
   </div>
 </template>
 
 <script>
-import Loader from "@/components/Loader";
-import Search from "../../components/Search.vue";
-import CartImg from '../../components/CartImg.vue';
+import Loader from "@/components/Loader.vue";
+import Search from "@/components/Search.vue";
+import CartImg from '@/components/CartImg.vue';
 export default {
-  components: { Search, CartImg },
+  components: { Search, CartImg, Loader },
   data() {
     return {
       loading: false,
@@ -64,8 +62,6 @@ export default {
   },
   created() {
     if (process.client) {
-      // alert("Client side only");
-      // this.loading = false;
       this.id = this.$route.params.id;
     }
   },

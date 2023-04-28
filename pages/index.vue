@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import GetStarted from '../components/GetStarted.vue'
+import GetStarted from '@/components/GetStarted.vue'
 export default {
   components: { GetStarted },
 
