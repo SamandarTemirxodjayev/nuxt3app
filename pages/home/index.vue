@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       loading: false,
-      id: ''
+      id: '',
     };
   },
   created() {
@@ -57,3 +57,4 @@ export default {
   },
 };
 </script>
+

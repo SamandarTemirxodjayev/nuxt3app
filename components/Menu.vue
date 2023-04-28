@@ -69,13 +69,14 @@
             >
               <NuxtLink :to="`/menu/${menu._id}`">
                 <menu-img :url="menu.photo_url" />
-                <div class="py-1 px-[5%]">
-                  <h3 class="font-bold text-xl mb-2">{{ menu.name }}</h3>
-                  <span class="font-bold text-xl">
-                    {{ Number(menu.price).toLocaleString() }} so'm
-                  </span>
-                </div>
               </NuxtLink>
+              <div class="py-1 px-[5%]">
+                <h3 class="font-bold text-xl mb-2">{{ menu.name }}</h3>
+                <span class="font-bold text-xl">
+                  {{ Number(menu.price).toLocaleString() }} so'm
+                </span>
+                <div @click="addProduct(menu)">ADD</div>
+              </div>
             </div>
           </div>
         </div>
@@ -108,11 +109,23 @@ export default {
       this.loading = false;
     });
   },
-  methods: {
-    filteredMenus(categoryId) {
-      return this.menus.filter((menu) => menu.category_id === categoryId);
-    },
+methods: {
+  filteredMenus(categoryId) {
+    return this.menus.filter((menu) => menu.category_id === categoryId);
   },
+  addProduct(menu) {
+    let products = localStorage.getItem('products');
+    if (!products) {
+      products = [menu];
+    } else {
+      products = JSON.parse(products);
+      products.push(menu);
+    }
+    localStorage.setItem('products', JSON.stringify(products));
+  },
+},
+
+
 };
 </script>
 <style>
