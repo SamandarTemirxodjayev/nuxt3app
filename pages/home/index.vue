@@ -13,7 +13,7 @@ const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
         food for you
       </div>
       <NuxtLink to="/" class="mt-[4%] w-[20%] h-[20%]">
-        <cart-img />
+        <cart-component />
       </NuxtLink>
     </div>
     <div class="my-[5%]">
@@ -42,17 +42,22 @@ const { data: catalogs } = useFetch("https://restoranmenu1.vercel.app/catalog");
 <script>
 import Loader from "@/components/Loader.vue";
 import Search from "@/components/Search.vue";
+import Menu from "@/components/Menu.vue";
+// import CartImg from "@/components/CartImg.vue";
+import CartComponent from '@/components/CartComponent.vue';
 export default {
-  components: { Search, Loader },
+  components: { Search, Loader, Menu, CartComponent },
   data() {
     return {
       loading: false,
-      id: '',
+      id: "",
+      products: [],
     };
   },
   created() {
     if (process.client) {
       this.id = this.$route.params.id;
+      this.products = JSON.parse(localStorage.getItem("products")) || [];
     }
   },
 };
